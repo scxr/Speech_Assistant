@@ -22,13 +22,13 @@ pip install -r requirements.txt
 
 Current commands : 
 
-*open(filename) for this to work you need to edit the myfiles.json with the program alias (for eg chrome) and then the path to the executeable. The alias must be lowercase and all \ need to be \\ see the current myfiles for an example
+* open(filename) for this to work you need to edit the myfiles.json with the program alias (for eg chrome) and then the path to the executeable. The alias must be lowercase and all \ need to be \\ see the current myfiles for an example
 
-*tell me a dad joke - tells a dad joke
+* tell me a dad joke - tells a dad joke
 
-*tell me a chuck norris joke - tells a chuck norris joke
+* tell me a chuck norris joke - tells a chuck norris joke
 
-*what is the temperature in x - fetches temperature. you need to register to openweathermap and put your api key in
+* what is the temperature in x - fetches temperature. you need to register to openweathermap and put your api key in
 
 more will be added
 
