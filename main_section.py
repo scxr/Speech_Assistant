@@ -11,7 +11,7 @@ from weather_module import gettemp
 from text_to_speech_module import speak
 from joke_module import *
 from geotext import GeoText
-
+from open_file_module import open_file
 def recognize_speech_from_mic(recognizer, microphone):
     with microphone as source:
         recognizer.adjust_for_ambient_noise(source) # try and mitigate the background noise
@@ -44,20 +44,24 @@ if __name__ == "__main__":
         spoken = recognize_speech_from_mic(recognizer, microphone) # run the speech recognition function from above
         if not spoken["success"]:
             print("I didn't catch that. What did you say?\n")
-        if "joke" in str(spoken["transcription"]).lower():
-            joke_text = str(spoken["transcription"]).lower()
-            print(joke_text)
-            if "chuck norris" in joke_text:
-                speak(chuck_norris_joke()) # say the chuck norris joke, called from a new file
-            if "dad" in joke_text:
-                speak(dad_joke())
+
 
 
         #speak("you said %s" %(spoken["transcription"]))
-        #print("You said: %s" %(spoken["transcription"]))
+        print("You said: %s" %(spoken["transcription"]))
         command = spoken["transcription"]
-
-        geocmd = GeoText(command)
-
-        if len(geocmd.cities) > 0:
-            speak("The temperature in %s is %s degrees celcius" %(geocmd.cities, gettemp(geocmd.cities[0])))
+        if command is not None:
+            if "joke" in str(spoken["transcription"]).lower():
+                joke_text = str(spoken["transcription"]).lower()
+                print(joke_text)
+                if "chuck norris" in joke_text:
+                    speak(chuck_norris_joke()) # say the chuck norris joke, called from a new file
+                if "dad" in joke_text:
+                    speak(dad_joke())
+            if "temperature" in command:
+                geocmd = GeoText(command)
+                if len(geocmd.cities) > 0:
+                    speak("The temperature in %s is %s degrees celcius" %(geocmd.cities, gettemp(geocmd.cities[0])))
+            if "open" in command:
+                fto = command.split(" ")[1]
+                open_file(fto.lower())
