@@ -1,6 +1,6 @@
 # Speech_Assistant
 
-This is a multi-functional speech assistant that when i have the time will add and update functions for.
+This is a multi-functional speech assistant that when i have the time will add and update functions for. Windows only.
 
 ## Installation
 
