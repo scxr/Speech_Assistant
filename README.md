@@ -4,7 +4,6 @@ This is a multi-functional speech assistant that when i have the time will add a
 
 ## Installation
 
-You need pyaudio, SpeecgRecognition, pyttsx3
 ```bash
 pip install pipwin
 pipwin install pyaudio # couldnt get pyaudio with just pip on my pc so had to use pipwin 
