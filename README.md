@@ -13,6 +13,10 @@ pip install pyttsx3
 pip install geotext
 pip install axju-jokes
 ```
+or
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
