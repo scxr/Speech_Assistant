@@ -10,6 +10,8 @@ pip install pipwin
 pipwin install pyaudio # couldnt get pyaudio with just pip on my pc so had to use pipwin 
 pip install SpeechRecognition 
 pip install pyttsx3
+pip install geotext
+pip install axju-jokes
 ```
 
 ## Usage
